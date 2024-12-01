@@ -1,0 +1,2 @@
+module BousaiHelper
+end

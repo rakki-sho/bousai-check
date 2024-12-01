@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag 'new', :media => "all" %>
+
+<div class="post-container">
+<h1>私の防災</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @tweet do |f| %>
+
+# データ型がstringで自由記述の入力フォーム
+  <div class="field">
+    <%= f.label :シチュエーション %>
+    <%= f.text_field :genre, :size => 140 %>
+  </div>
+
+# データ型がstringで選択式の入力フォーム
+  <div class="field">
+    <%= f.label :場所  %>
+    <%= f.select :place, 
+    [["家", "家"], 
+    ["屋内（家以外）", "屋内（家以外）"], 
+    ["屋外", "屋外"]], include_blank: "選択して下さい" %>
+  </div>
+
+# データ型がtextで自由記述の入力フォーム
+  <div class="field">
+    <%= f.label :コメント  %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+ # データ型がstringで自由記述の入力フォーム
+  <div class="field">
+    <%= f.label :画像 %>
+    <%= f.file_field :image, :size => 140 %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", tweets_path %>
+
+</div>
+
+
+

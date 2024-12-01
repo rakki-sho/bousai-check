@@ -1,0 +1,54 @@
+<%= form_tag(posts2_index_path, method: :get) do %>
+    <h3>Q.1 1人当たりに備えるべき食料はどれくらいでしょう？</h3>
+        <label>
+            <%= radio_button_tag :food, "1" %> 1日分
+        </label>
+        <label>
+            <%= radio_button_tag :food, "2" %> 1週間分
+        </label>
+        <label>
+            <%= radio_button_tag :food, "3" %> 1か月分
+        </label>
+        
+
+    <h3>Q.2 1人当たりに必要な水の量はどれくらいでしょう？</h3>
+        <label>
+            <%= radio_button_tag :water, "1" %> 2L×3日分=6L
+        </label>
+        <label>
+            <%= radio_button_tag :water, "2" %> 3L×3日分=9L
+        </label>
+        <label>
+            <%= radio_button_tag :water, "3" %> 3L×1日=3L
+        </label>
+
+    <h3>Q.3 食料だけでなくトイレも用意する必要がある。○か×か？/h3>
+        <label>
+            <%= radio_button_tag :toilet, "1" %> ○（必要）
+        </label>
+        <label>
+            <%= radio_button_tag :toilet, "2" %> ×（不要）
+        </label>
+    
+    <h3>Q.4 防災の日はいつでしょう？</h3>
+        <label>
+            <%= radio_button_tag :bousai_no_hi, "1" %> 9月1日
+        </label>
+        <label>
+            <%= radio_button_tag :bousai_no_hi, "2" %> 1月14日
+        </label>
+        <label>
+            <%= radio_button_tag :bousai_no_hi, "3" %> 10月3日
+        </label>
+
+    <h3>Q.5 防災グッズや非常食、水は用意していますか？</h3>
+        <label>
+            <%= radio_button_tag :equipment, "1" %> はい
+        </label>
+        <label>
+            <%= radio_button_tag :equipment, "2" %> いいえ
+        </label>
+
+    <br>
+    <%= submit_tag '回答完了'  %>
+ <% end %>

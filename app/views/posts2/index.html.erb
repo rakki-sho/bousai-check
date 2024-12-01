@@ -1,0 +1,8 @@
+<% @posts2.each do |t| %>
+    <% if t.number == @result %>
+        <div class="tweet">
+            あなたは<%= t.content %>
+        </div>
+    <% end %>
+<% end %>
+ <%= link_to "トップページ", bousai_index_path %>

@@ -1,0 +1,66 @@
+ <%= form_tag(bousai_new_path, method: :get) do %>
+    <div class="container-sindan">
+    <div class="row">
+        
+        <p>Q.1 エレベータに乗っているときに地震が発生しました。一番にすることは何ですか？</p>
+        <label>
+            <%= radio_button_tag :elevator, "1", nil %> 一番近い階のボタンだけを押す
+        </label>
+        <label>
+            <%= radio_button_tag :elevator, "2" , nil%> 全ての階のボタンを押す
+        </label>
+        <label>
+            <%= radio_button_tag :elevator, "3", nil %> 一階のボタンを押す
+        </label>
+        
+
+    <p>Q.2 屋内で地震が発生しました。まず何をしますか</p>
+        <label>
+            <%= radio_button_tag :inside, "1", nil %> すぐに外へ逃げだす
+        </label>
+        <label>
+            <%= radio_button_tag :inside, "2", nil %> その場にしゃがんで頭を守る
+        </label>
+        <label>
+            <%= radio_button_tag :inside, "3", nil %> 情報を調べるためにスマホを探す
+        </label>
+
+    <p>Q.3 緊急地震速報がなったとき、何をしますか。</p>
+        <label>
+            <%= radio_button_tag :alert, "1", nil %> テーブルなどの下に入り、低い姿勢を取る
+        </label>
+        <label>
+            <%= radio_button_tag :alert, "2", nil %> アラームを止める
+        </label>
+        <label>
+            <%= radio_button_tag :alert, "3" , nil%> 外へ逃げるために窓の近くに行く
+        </label>
+    
+    <p>Q.4 災害用伝言ダイヤルの番号はどれでしょう？</p>
+        <label>
+            <%= radio_button_tag :dial, "1", nil %> 171
+        </label>
+        <label>
+            <%= radio_button_tag :dial, "2" , nil%> 118
+        </label>
+        <label>
+            <%= radio_button_tag :dial, "3" , nil%> 188
+        </label>
+
+    <p>Q.5 自分の家の家具を固定していますか？</p>
+        <label>
+            <%= radio_button_tag :fixing, "1" , nil%> はい
+        </label>
+        <label>
+            <%= radio_button_tag :fixing, "2", nil %> いいえ
+        </label>
+
+    </div>
+    </div>
+    
+    <div class="sindanbotan">           
+     <%= submit_tag "回答完了" %>
+    </div>
+    <%= link_to '回答完了', bousai_show_path %>
+
+ <% end %>

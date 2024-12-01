@@ -1,0 +1,57 @@
+ <%= form_tag(posts_path, method: :get) do %>
+    <h3>Q.1 エレベータに乗っているときに地震が発生しました。一番にすることは何ですか？</h3>
+        <label>
+            <%= radio_button_tag :elevator, "1" %> 一番近い階のボタンだけを押す
+        </label>
+        <label>
+            <%= radio_button_tag :elevator, "2" %> 全ての階のボタンを押す
+        </label>
+        <label>
+            <%= radio_button_tag :elevator, "3" %> 一階のボタンを押す
+        </label>
+        
+
+    <h3>Q.2 屋内で地震が発生しました。まず何をしますか</h3>
+        <label>
+            <%= radio_button_tag :inside, "1" %> すぐに外へ逃げだす
+        </label>
+        <label>
+            <%= radio_button_tag :inside, "2" %> その場にしゃがんで頭を守る
+        </label>
+        <label>
+            <%= radio_button_tag :inside, "3" %> 情報を調べるためにスマホを探す
+        </label>
+
+    <h3>Q.3 緊急地震速報がなったとき、何をしますか。</h3>
+        <label>
+            <%= radio_button_tag :alert, "1" %> テーブルなどの下に入り、低い姿勢を取る
+        </label>
+        <label>
+            <%= radio_button_tag :alert, "2" %> アラームを止める
+        </label>
+        <label>
+            <%= radio_button_tag :alert, "3" %> 外へ逃げるために窓の近くに行く
+        </label>
+    
+    <h3>Q.4 災害用伝言ダイヤルの番号はどれでしょう？</h3>
+        <label>
+            <%= radio_button_tag :dial, "1" %> 171
+        </label>
+        <label>
+            <%= radio_button_tag :dial, "2" %> 118
+        </label>
+        <label>
+            <%= radio_button_tag :dial, "3" %> 188
+        </label>
+
+    <h3>Q.5 自分の家の家具を固定していますか？</h3>
+        <label>
+            <%= radio_button_tag :fixing, "1" %> はい
+        </label>
+        <label>
+            <%= radio_button_tag :fixing, "2" %> いいえ
+        </label>
+
+    <br>
+    <%= submit_tag '回答完了'  %>
+ <% end %>

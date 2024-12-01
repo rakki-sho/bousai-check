@@ -1,0 +1,51 @@
+<%= form_tag(posts3_index_path, method: :get) do %>
+    <h3>Q.1 避難する際に、履くべき靴はどれでしょう？</h3>
+        <label>
+            <%= radio_button_tag :shoes, "1" %> サンダル
+        </label>
+        <label>
+            <%= radio_button_tag :shoes, "2" %> 長靴
+        </label>
+        <label>
+            <%= radio_button_tag :shoes, "3" %> 運動靴
+        </label>
+        
+
+    <h3>Q.2 内閣府が定める警戒レベルについて、レベルの数はいくつでしょう？</h3>
+        <label>
+            <%= radio_button_tag :evacuation_level, "1" %> 3つ
+        </label>
+        <label>
+            <%= radio_button_tag :evacuation_level, "2" %> 4つ
+        </label>
+        <label>
+            <%= radio_button_tag :evacuation_level, "3" %> 5つ
+        </label>
+
+    <h3>Q.3 警戒レベルが最大になった時に避難すればいい。○か×か？/h3>
+        <label>
+            <%= radio_button_tag :evacuation_timing, "1" %> ○
+        </label>
+        <label>
+            <%= radio_button_tag :evacuation_timing, "2" %> ×
+        </label>
+    
+    <h3>Q.4 膝の下にまで水が浸水しているけれども、無理にでも家の外へ避難するべきである。○か×か？</h3>
+        <label>
+            <%= radio_button_tag :knee, "1" %> ○
+        </label>
+        <label>
+            <%= radio_button_tag :knee, "2" %> ×
+        </label>
+        
+    <h3>Q.5 避難する際、傘よりもレインコートを着て移動した方がいい。○か×か？</h3>
+        <label>
+            <%= radio_button_tag :raincoat, "1" %> ○
+        </label>
+        <label>
+            <%= radio_button_tag :raincoat, "2" %> ×
+        </label>
+
+    <br>
+    <%= submit_tag '回答完了'  %>
+ <% end %>

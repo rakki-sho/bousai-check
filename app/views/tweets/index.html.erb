@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="tweets-container">
+<h1>私の防災</h1>
+<h3>投稿一覧</h3>
+<%= link_to "新規投稿へ", new_tweet_path %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+       <div class="main-box">
+        <div class="left-container"><%= t.about %></div>
+        <div class="right-container">
+       <% if t.image.attached? %>
+            <%= image_tag t.image, size: '250x200'%>
+        <% end %>
+      <%= t.genre %>
+      <%= t.place%>
+      <%= t.about %>
+      <%= t.image %>
+      <%= link_to "詳細へ", tweet_path(t.id) %>
+      </div>
+    <%= link_to "編集する", edit_tweets_path(t.id) %>
+    <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+   </div>
+    </div><p class="time"><%= t.created_at %></p>
+    
+  <% end %>
+<%= link_to "トップページ", bousai_index_path %>
+</div>
